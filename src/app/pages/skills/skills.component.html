@@ -1,0 +1,21 @@
+<section class="site-section section-skills">
+    <div class="container">
+        <div class="text-center">
+            <h3>MIS HABILIDADES</h3>
+            <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+        </div>
+        <div class="row">
+            <div *ngFor="let item of skillsService.skills" class="col-md-4">
+                <div class="skill">
+                    <h4>{{item.titulo}}</h4>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" data-transitiongoal="100" [style.width.%]="item.valor"></div><!-- /.progress-bar -->
+                    </div><!-- /.progress -->
+                </div><!-- /.skill -->
+                <br>
+            </div>
+            
+
+        </div>
+    </div>
+</section><!-- /.secton-skills -->

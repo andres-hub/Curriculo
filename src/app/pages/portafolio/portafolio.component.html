@@ -1,0 +1,22 @@
+
+        <section id="portfolio" class="site-section section-portfolio">
+          <div class="container">
+              <div class="text-center">
+                  <h3>MIS TRABAJOS RECIENTES</h3>
+                  <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+              </div>
+              <div class="row">
+
+                  <div *ngFor="let item of portafolioService.portafolio" class="col-md-4 col-xs-6">
+                      <div class="portfolio-item">
+                          <img [src]="item.urlImg" class="img-res" alt="">
+                          <div class="portfolio-item-info">
+                              <h4>{{item.titulo}}</h4>
+                              <a *ngIf(item.urlProyecto) href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>                              
+                          </div><!-- /.portfolio-item-info -->
+                      </div><!-- /.portfolio-item -->
+                  </div>
+
+              </div>
+          </div>
+      </section><!-- /.secton-portfolio -->
